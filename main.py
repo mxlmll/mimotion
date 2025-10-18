@@ -42,7 +42,7 @@ def fake_ip():
 
 # 账号脱敏
 def desensitize_user_name(user):
-    if len(user) <= 8:  
+    if len(user) <= 8:
         ln = max(math.floor(len(user) / 3), 1)
         return f'{user[:ln]}***{user[-ln:]}'
     return f'{user[:3]}****{user[-4:]}'
