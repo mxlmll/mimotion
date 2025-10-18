@@ -31,6 +31,8 @@ def get_min_max_by_time(hour=None, minute=None):
     time_rate = min((max((hour - h_start),0) * 60 + minute) / ((21 - h_start) * 60), 1)
     min_step = get_int_value_default(config, 'MIN_STEP', 17000)
     max_step = get_int_value_default(config, 'MAX_STEP', 18000)
+    if hour > 21:
+        return max_step, max_step
     return int(time_rate * min_step), int(time_rate * max_step)
 
 
