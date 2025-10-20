@@ -28,8 +28,8 @@ def get_min_max_by_time(hour=None, minute=None):
     if minute is None:
         minute = time_bj.minute
     h_start = 6
-    time_rate = min((max((hour - h_start),0) * 60 + minute) / ((21 - h_start) * 60), 1)
-    min_step = get_int_value_default(config, 'MIN_STEP', 17000)
+    time_rate = min((max((hour - h_start),0) * 60 + minute) / ((22 - h_start) * 60), 1)
+    min_step = get_int_value_default(config, 'MIN_STEP', 17200)
     max_step = get_int_value_default(config, 'MAX_STEP', 18000)
     if hour > 21:
         return max_step, max_step
